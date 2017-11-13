@@ -49,8 +49,8 @@ namespace Presentation
             btnXoa.Enabled = !pCapNhat;
             btnSua.Enabled = !pCapNhat;
             btnThoat.Enabled = !pCapNhat;
-            btnLuu.Enabled = !pCapNhat;
-            btnHuy.Enabled = !pCapNhat;
+            btnLuu.Enabled = pCapNhat;
+            btnHuy.Enabled = pCapNhat;
         }
         private void loadCBOLop()
         {

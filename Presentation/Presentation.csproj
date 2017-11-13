@@ -126,9 +126,8 @@
       <Name>DataAsscess</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
-    <Content Include="Hinh\0311 - be2Em5q.jpg" />
+    <Folder Include="Hinh\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
