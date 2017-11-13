@@ -47,22 +47,23 @@
             this.labelControl4 = new DevExpress.XtraEditors.LabelControl();
             this.labelControl1 = new DevExpress.XtraEditors.LabelControl();
             this.groupControl2 = new DevExpress.XtraEditors.GroupControl();
-            this.buttonX1 = new DevComponents.DotNetBar.ButtonX();
-            this.textBoxX5 = new DevComponents.DotNetBar.Controls.TextBoxX();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.simpleButton1 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton2 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton3 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton4 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton5 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton6 = new DevExpress.XtraEditors.SimpleButton();
-            this.simpleButton7 = new DevExpress.XtraEditors.SimpleButton();
+            this.btnTimkiem = new DevComponents.DotNetBar.ButtonX();
+            this.txtTimkiem = new DevComponents.DotNetBar.Controls.TextBoxX();
+            this.dgvDSSV = new System.Windows.Forms.DataGridView();
+            this.btnChonhinh = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThem = new DevExpress.XtraEditors.SimpleButton();
+            this.btnXoa = new DevExpress.XtraEditors.SimpleButton();
+            this.btnSua = new DevExpress.XtraEditors.SimpleButton();
+            this.btnLuu = new DevExpress.XtraEditors.SimpleButton();
+            this.btnHuy = new DevExpress.XtraEditors.SimpleButton();
+            this.btnThoat = new DevExpress.XtraEditors.SimpleButton();
             this.pHinh = new System.Windows.Forms.PictureBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl1)).BeginInit();
             this.groupControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).BeginInit();
             this.groupControl2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSSV)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHinh)).BeginInit();
             this.SuspendLayout();
             // 
@@ -120,6 +121,7 @@
             this.radNam.TabStop = true;
             this.radNam.Text = "Nam";
             this.radNam.UseVisualStyleBackColor = true;
+            this.radNam.CheckedChanged += new System.EventHandler(this.radNam_CheckedChanged);
             // 
             // txtQuequan
             // 
@@ -245,111 +247,120 @@
             // 
             // groupControl2
             // 
-            this.groupControl2.Controls.Add(this.buttonX1);
-            this.groupControl2.Controls.Add(this.textBoxX5);
+            this.groupControl2.Controls.Add(this.btnTimkiem);
+            this.groupControl2.Controls.Add(this.txtTimkiem);
             this.groupControl2.Location = new System.Drawing.Point(12, 380);
             this.groupControl2.Name = "groupControl2";
             this.groupControl2.Size = new System.Drawing.Size(588, 79);
             this.groupControl2.TabIndex = 2;
             this.groupControl2.Text = "Tìm kiếm";
             // 
-            // buttonX1
+            // btnTimkiem
             // 
-            this.buttonX1.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
-            this.buttonX1.Location = new System.Drawing.Point(407, 29);
-            this.buttonX1.Name = "buttonX1";
-            this.buttonX1.Size = new System.Drawing.Size(81, 27);
-            this.buttonX1.TabIndex = 1;
-            this.buttonX1.Text = "Tìm kiếm";
+            this.btnTimkiem.AccessibleRole = System.Windows.Forms.AccessibleRole.PushButton;
+            this.btnTimkiem.Location = new System.Drawing.Point(407, 29);
+            this.btnTimkiem.Name = "btnTimkiem";
+            this.btnTimkiem.Size = new System.Drawing.Size(81, 27);
+            this.btnTimkiem.TabIndex = 1;
+            this.btnTimkiem.Text = "Tìm kiếm";
+            this.btnTimkiem.Click += new System.EventHandler(this.btnTimkiem_Click);
             // 
-            // textBoxX5
+            // txtTimkiem
             // 
             // 
             // 
             // 
-            this.textBoxX5.Border.Class = "TextBoxBorder";
-            this.textBoxX5.Location = new System.Drawing.Point(18, 29);
-            this.textBoxX5.Name = "textBoxX5";
-            this.textBoxX5.Size = new System.Drawing.Size(352, 28);
-            this.textBoxX5.TabIndex = 0;
-            this.textBoxX5.Text = "Nhập vào tên sinh viên cần tìm...";
+            this.txtTimkiem.Border.Class = "TextBoxBorder";
+            this.txtTimkiem.Location = new System.Drawing.Point(18, 29);
+            this.txtTimkiem.Name = "txtTimkiem";
+            this.txtTimkiem.Size = new System.Drawing.Size(352, 28);
+            this.txtTimkiem.TabIndex = 0;
+            this.txtTimkiem.Text = "Nhập vào tên sinh viên cần tìm...";
+            this.txtTimkiem.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtTimkiem_MouseDown);
             // 
-            // dataGridView1
+            // dgvDSSV
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 465);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(588, 153);
-            this.dataGridView1.TabIndex = 3;
+            this.dgvDSSV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDSSV.Location = new System.Drawing.Point(12, 465);
+            this.dgvDSSV.Name = "dgvDSSV";
+            this.dgvDSSV.Size = new System.Drawing.Size(588, 153);
+            this.dgvDSSV.TabIndex = 3;
             // 
-            // simpleButton1
+            // btnChonhinh
             // 
-            this.simpleButton1.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.Image")));
-            this.simpleButton1.Location = new System.Drawing.Point(662, 308);
-            this.simpleButton1.Name = "simpleButton1";
-            this.simpleButton1.Size = new System.Drawing.Size(124, 38);
-            this.simpleButton1.TabIndex = 4;
-            this.simpleButton1.Text = "Chọn hình";
+            this.btnChonhinh.Image = ((System.Drawing.Image)(resources.GetObject("btnChonhinh.Image")));
+            this.btnChonhinh.Location = new System.Drawing.Point(662, 308);
+            this.btnChonhinh.Name = "btnChonhinh";
+            this.btnChonhinh.Size = new System.Drawing.Size(124, 38);
+            this.btnChonhinh.TabIndex = 4;
+            this.btnChonhinh.Text = "Chọn hình";
+            //this.btnChonhinh.MouseDown += new System.Windows.Forms.MouseEventHandler(this.btnChonhinh_MouseDown);
             // 
-            // simpleButton2
+            // btnThem
             // 
-            this.simpleButton2.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton2.Image")));
-            this.simpleButton2.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton2.Location = new System.Drawing.Point(636, 380);
-            this.simpleButton2.Name = "simpleButton2";
-            this.simpleButton2.Size = new System.Drawing.Size(74, 67);
-            this.simpleButton2.TabIndex = 5;
-            this.simpleButton2.Text = "Thêm";
+            this.btnThem.Image = ((System.Drawing.Image)(resources.GetObject("btnThem.Image")));
+            this.btnThem.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnThem.Location = new System.Drawing.Point(636, 380);
+            this.btnThem.Name = "btnThem";
+            this.btnThem.Size = new System.Drawing.Size(74, 67);
+            this.btnThem.TabIndex = 5;
+            this.btnThem.Text = "Thêm";
+            this.btnThem.Click += new System.EventHandler(this.btnThem_Click);
             // 
-            // simpleButton3
+            // btnXoa
             // 
-            this.simpleButton3.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton3.Image")));
-            this.simpleButton3.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton3.Location = new System.Drawing.Point(636, 465);
-            this.simpleButton3.Name = "simpleButton3";
-            this.simpleButton3.Size = new System.Drawing.Size(74, 67);
-            this.simpleButton3.TabIndex = 5;
-            this.simpleButton3.Text = "Xóa";
+            this.btnXoa.Image = ((System.Drawing.Image)(resources.GetObject("btnXoa.Image")));
+            this.btnXoa.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnXoa.Location = new System.Drawing.Point(636, 465);
+            this.btnXoa.Name = "btnXoa";
+            this.btnXoa.Size = new System.Drawing.Size(74, 67);
+            this.btnXoa.TabIndex = 5;
+            this.btnXoa.Text = "Xóa";
+            this.btnXoa.Click += new System.EventHandler(this.btnXoa_Click);
             // 
-            // simpleButton4
+            // btnSua
             // 
-            this.simpleButton4.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton4.Image")));
-            this.simpleButton4.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton4.Location = new System.Drawing.Point(636, 551);
-            this.simpleButton4.Name = "simpleButton4";
-            this.simpleButton4.Size = new System.Drawing.Size(74, 67);
-            this.simpleButton4.TabIndex = 5;
-            this.simpleButton4.Text = "Sửa";
+            this.btnSua.Image = ((System.Drawing.Image)(resources.GetObject("btnSua.Image")));
+            this.btnSua.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnSua.Location = new System.Drawing.Point(636, 551);
+            this.btnSua.Name = "btnSua";
+            this.btnSua.Size = new System.Drawing.Size(74, 67);
+            this.btnSua.TabIndex = 5;
+            this.btnSua.Text = "Sửa";
+            this.btnSua.Click += new System.EventHandler(this.btnSua_Click);
             // 
-            // simpleButton5
+            // btnLuu
             // 
-            this.simpleButton5.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton5.Image")));
-            this.simpleButton5.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton5.Location = new System.Drawing.Point(742, 380);
-            this.simpleButton5.Name = "simpleButton5";
-            this.simpleButton5.Size = new System.Drawing.Size(74, 67);
-            this.simpleButton5.TabIndex = 5;
-            this.simpleButton5.Text = "Lưu";
+            this.btnLuu.Image = ((System.Drawing.Image)(resources.GetObject("btnLuu.Image")));
+            this.btnLuu.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnLuu.Location = new System.Drawing.Point(742, 380);
+            this.btnLuu.Name = "btnLuu";
+            this.btnLuu.Size = new System.Drawing.Size(74, 67);
+            this.btnLuu.TabIndex = 5;
+            this.btnLuu.Text = "Lưu";
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
-            // simpleButton6
+            // btnHuy
             // 
-            this.simpleButton6.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton6.Image")));
-            this.simpleButton6.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton6.Location = new System.Drawing.Point(742, 465);
-            this.simpleButton6.Name = "simpleButton6";
-            this.simpleButton6.Size = new System.Drawing.Size(74, 67);
-            this.simpleButton6.TabIndex = 5;
-            this.simpleButton6.Text = "Hủy";
+            this.btnHuy.Image = ((System.Drawing.Image)(resources.GetObject("btnHuy.Image")));
+            this.btnHuy.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnHuy.Location = new System.Drawing.Point(742, 465);
+            this.btnHuy.Name = "btnHuy";
+            this.btnHuy.Size = new System.Drawing.Size(74, 67);
+            this.btnHuy.TabIndex = 5;
+            this.btnHuy.Text = "Hủy";
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
-            // simpleButton7
+            // btnThoat
             // 
-            this.simpleButton7.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton7.Image")));
-            this.simpleButton7.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
-            this.simpleButton7.Location = new System.Drawing.Point(742, 551);
-            this.simpleButton7.Name = "simpleButton7";
-            this.simpleButton7.Size = new System.Drawing.Size(74, 67);
-            this.simpleButton7.TabIndex = 5;
-            this.simpleButton7.Text = "Thoát";
+            this.btnThoat.Image = ((System.Drawing.Image)(resources.GetObject("btnThoat.Image")));
+            this.btnThoat.ImageLocation = DevExpress.XtraEditors.ImageLocation.TopCenter;
+            this.btnThoat.Location = new System.Drawing.Point(742, 551);
+            this.btnThoat.Name = "btnThoat";
+            this.btnThoat.Size = new System.Drawing.Size(74, 67);
+            this.btnThoat.TabIndex = 5;
+            this.btnThoat.Text = "Thoát";
+            this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
             // 
             // pHinh
             // 
@@ -359,6 +370,10 @@
             this.pHinh.TabIndex = 6;
             this.pHinh.TabStop = false;
             // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -366,14 +381,14 @@
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(831, 634);
             this.Controls.Add(this.pHinh);
-            this.Controls.Add(this.simpleButton4);
-            this.Controls.Add(this.simpleButton3);
-            this.Controls.Add(this.simpleButton7);
-            this.Controls.Add(this.simpleButton6);
-            this.Controls.Add(this.simpleButton5);
-            this.Controls.Add(this.simpleButton2);
-            this.Controls.Add(this.simpleButton1);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnSua);
+            this.Controls.Add(this.btnXoa);
+            this.Controls.Add(this.btnThoat);
+            this.Controls.Add(this.btnHuy);
+            this.Controls.Add(this.btnLuu);
+            this.Controls.Add(this.btnThem);
+            this.Controls.Add(this.btnChonhinh);
+            this.Controls.Add(this.dgvDSSV);
             this.Controls.Add(this.groupControl2);
             this.Controls.Add(this.groupControl1);
             this.Controls.Add(this.labelX1);
@@ -385,7 +400,7 @@
             this.groupControl1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.groupControl2)).EndInit();
             this.groupControl2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDSSV)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pHinh)).EndInit();
             this.ResumeLayout(false);
 
@@ -411,17 +426,18 @@
         private DevExpress.XtraEditors.LabelControl labelControl4;
         private DevExpress.XtraEditors.LabelControl labelControl1;
         private DevExpress.XtraEditors.GroupControl groupControl2;
-        private DevComponents.DotNetBar.ButtonX buttonX1;
-        private DevComponents.DotNetBar.Controls.TextBoxX textBoxX5;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton1;
-        private DevExpress.XtraEditors.SimpleButton simpleButton2;
-        private DevExpress.XtraEditors.SimpleButton simpleButton3;
-        private DevExpress.XtraEditors.SimpleButton simpleButton4;
-        private DevExpress.XtraEditors.SimpleButton simpleButton5;
-        private DevExpress.XtraEditors.SimpleButton simpleButton6;
-        private DevExpress.XtraEditors.SimpleButton simpleButton7;
+        private DevComponents.DotNetBar.ButtonX btnTimkiem;
+        private DevComponents.DotNetBar.Controls.TextBoxX txtTimkiem;
+        private System.Windows.Forms.DataGridView dgvDSSV;
+        private DevExpress.XtraEditors.SimpleButton btnChonhinh;
+        private DevExpress.XtraEditors.SimpleButton btnThem;
+        private DevExpress.XtraEditors.SimpleButton btnXoa;
+        private DevExpress.XtraEditors.SimpleButton btnSua;
+        private DevExpress.XtraEditors.SimpleButton btnLuu;
+        private DevExpress.XtraEditors.SimpleButton btnHuy;
+        private DevExpress.XtraEditors.SimpleButton btnThoat;
         private System.Windows.Forms.PictureBox pHinh;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 
