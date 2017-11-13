@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAsscess", "DataAsscess\DataAsscess.csproj", "{284155B5-F571-4DB7-A22C-B33BB0ABB44D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Business Logic", "Business Logic\Business Logic.csproj", "{8AB8929C-0BD5-456D-B832-1F1698851DA8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Presentation", "Presentation\Presentation.csproj", "{1D386A54-1BB2-4536-8B16-418787A75F7C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{284155B5-F571-4DB7-A22C-B33BB0ABB44D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{284155B5-F571-4DB7-A22C-B33BB0ABB44D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{284155B5-F571-4DB7-A22C-B33BB0ABB44D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{284155B5-F571-4DB7-A22C-B33BB0ABB44D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8AB8929C-0BD5-456D-B832-1F1698851DA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8AB8929C-0BD5-456D-B832-1F1698851DA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8AB8929C-0BD5-456D-B832-1F1698851DA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8AB8929C-0BD5-456D-B832-1F1698851DA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D386A54-1BB2-4536-8B16-418787A75F7C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D386A54-1BB2-4536-8B16-418787A75F7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D386A54-1BB2-4536-8B16-418787A75F7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D386A54-1BB2-4536-8B16-418787A75F7C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
