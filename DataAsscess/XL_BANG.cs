@@ -11,7 +11,7 @@ namespace DataAsscess
     public class XL_BANG : DataTable
     {
         #region Bien cuc bo
-        public static String Chuoi_lien_ket = "Data Source=HUUPRO-PC;Initial Catalog=QLSINHVIEN4;Integrated Security=True";
+        public static String Chuoi_lien_ket = @"Data Source=.;Initial Catalog=QLSINHVIEN4;Integrated Security=True";
         private SqlDataAdapter mBo_doc_ghi = new SqlDataAdapter();
         private SqlConnection mKet_noi;
         private String mChuoi_SQL;

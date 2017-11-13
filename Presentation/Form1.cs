@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Business_Logic;
+using System.Data.SqlClient;
+using System.IO;
 namespace Presentation
 {
     public partial class Form1 : Form
@@ -132,22 +134,24 @@ namespace Presentation
             txtTimkiem.Text = "";
         }
 
-        //private void btnChonhinh_MouseDown(object sender, MouseEventArgs e)
-        //{
-        //    openFileDialog1.Filter = "JPG Files|*.jpg|PNG Files|*.png|All Files|*.*";
-        //    if (openFileDialog1.ShowDialog() == DialogResult.OK)
-        //    {
-        //        string fileName = openFileDialog1.SafeFileName;
-        //        string pathFile = path + "/" + fileName;
-        //        if (!File.Exists(pathFile))
-        //            FileDialog.Copy(openFileDialog1.FileName, pathFile);
-        //        pHinh.ImageLocation = pathFile;
-        //    }
-        //}
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void btnChonhinh_Click(object sender, EventArgs e)
+        {
+            openFileDialog1.Filter = "JPG Files|*.jpg|PNG Files|*.png|All Files|*.*";
+            if (openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string fileName = openFileDialog1.SafeFileName;
+                string pathFile = path + "/" + fileName;
+                if (!File.Exists(pathFile))
+                    File.Copy(openFileDialog1.FileName, pathFile);
+                pHinh.ImageLocation = pathFile;
+            }
+
         }
     }
 }
